@@ -16,7 +16,9 @@ class HomeViewBody extends StatelessWidget {
     return const Column(
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 40),
+          padding: EdgeInsets.symmetric(
+            horizontal: 30,
+          ),
           child: CustomAppbar(),
         ),
         FeatureListViewitem(),
