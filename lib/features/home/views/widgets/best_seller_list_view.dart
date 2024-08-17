@@ -1,6 +1,7 @@
 import 'package:book_ly/constant.dart';
 import 'package:book_ly/core/utils/assets.dart';
 import 'package:book_ly/core/utils/styles.dart';
+import 'package:book_ly/features/home/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerListView extends StatelessWidget {
@@ -27,32 +28,46 @@ class BestSellerListView extends StatelessWidget {
               ),
             ),
           ),
-          Column(
-            children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width * .5,
-                child: Text(
-                  'Could not navigate to initial route',
-                  style: Styles.textStyle20.copyWith(fontFamily: kGTSectraFine),
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 2,
-                ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    child: Text(
+                      'Could not navigate to initial route',
+                      style: Styles.textStyle20
+                          .copyWith(fontFamily: kGTSectraFine),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 4,
+                  ),
+                  const Text(
+                    'here was no co',
+                    style: Styles.textStyle16,
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const Row(
+                    children: [
+                      Text(
+                        '19.000',
+                        style: Styles.textStyle20,
+                      ),
+                      SizedBox(
+                        width: 50,
+                      ),
+                      BookRating()
+                    ],
+                  ),
+                ],
               ),
-              const SizedBox(
-                height: 4,
-              ),
-              const Text(
-                'here was no co',
-                style: Styles.textStyle16,
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              const Text(
-                '19.000',
-                style: Styles.textStyle20,
-              ),
-            ],
+            ),
           )
           // Add more items here if needed
         ],
