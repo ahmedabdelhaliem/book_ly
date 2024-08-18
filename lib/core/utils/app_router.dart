@@ -1,3 +1,4 @@
+import 'package:book_ly/features/home/views/book_detils_view.dart';
 import 'package:book_ly/features/home/views/home_view.dart';
 import 'package:book_ly/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +6,7 @@ import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/homeView';
+  static const kBookDetilsView = '/bookdetails';
   static final GoRouter router = GoRouter(routes: <RouteBase>[
     GoRoute(
       path: '/',
@@ -16,6 +18,12 @@ abstract class AppRouter {
       path: kHomeView,
       builder: (BuildContext context, GoRouterState state) {
         return const HomeView();
+      },
+    ),
+    GoRoute(
+      path: kBookDetilsView,
+      builder: (BuildContext context, GoRouterState state) {
+        return const BookDetilsView();
       },
     )
   ]);
