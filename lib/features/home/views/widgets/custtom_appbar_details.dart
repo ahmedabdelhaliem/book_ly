@@ -10,7 +10,7 @@ class CusttomAppbarDetails extends StatelessWidget {
       child: Row(
         children: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.close)),
-          Spacer(),
+          const Spacer(),
           IconButton(
               onPressed: () {}, icon: const Icon(Icons.shopping_cart_outlined))
         ],

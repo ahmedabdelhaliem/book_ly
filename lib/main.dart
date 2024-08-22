@@ -1,12 +1,12 @@
 import 'package:book_ly/constant.dart';
 import 'package:book_ly/core/utils/app_router.dart';
-import 'package:book_ly/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  
   runApp(const Bookly());
+  Hive.
 }
 
 class Bookly extends StatelessWidget {

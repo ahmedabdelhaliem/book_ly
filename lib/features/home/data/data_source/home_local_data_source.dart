@@ -1,19 +1,19 @@
-import 'package:book_ly/features/home/domain/entites/book_entites.dart';
+import 'package:book_ly/features/home/domain/entites/book_entity.dart';
 
 abstract class HomeLocalDataSource {
-  List<BookEntites> fetchFeatureBooks();
-  List<BookEntites> fetchNewestBooks();
+  List<BookEntity> fetchFeatureBooks();
+  List<BookEntity> fetchNewestBooks();
 }
 
 class HomeLocalDataSourceImpl extends HomeLocalDataSource {
   @override
-  List<BookEntites> fetchFeatureBooks() {
+  List<BookEntity> fetchFeatureBooks() {
     // TODO: implement fetchFeatureBooks
     throw UnimplementedError();
   }
 
   @override
-  List<BookEntites> fetchNewestBooks() {
+  List<BookEntity> fetchNewestBooks() {
     // TODO: implement fetchNewestBooks
     throw UnimplementedError();
   }

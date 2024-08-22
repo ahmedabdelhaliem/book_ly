@@ -24,7 +24,7 @@ class CustomBotton extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: borderRadius ?? BorderRadius.circular(12))),
           child: Text(
-            '$text',
+            text,
             style: Styles.textStyle18
                 .copyWith(color: textcolor, fontWeight: FontWeight.w900),
           )),

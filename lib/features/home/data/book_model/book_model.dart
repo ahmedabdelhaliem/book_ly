@@ -1,12 +1,11 @@
-import 'package:book_ly/features/home/domain/entites/book_entites.dart';
-import 'package:dartz/dartz.dart';
+import 'package:book_ly/features/home/domain/entites/book_entite.dart';
 
 import 'access_info.dart';
 import 'sale_info.dart';
 import 'search_info.dart';
 import 'volume_info.dart';
 
-class BookModel extends BookEntites {
+class BookModel extends BookEntity {
   String? kind;
   String? id;
   String? etag;

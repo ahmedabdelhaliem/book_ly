@@ -1,10 +1,10 @@
 import 'package:book_ly/core/utils/api_servisce.dart';
 import 'package:book_ly/features/home/data/book_model/book_model.dart';
-import 'package:book_ly/features/home/domain/entites/book_entites.dart';
+import 'package:book_ly/features/home/domain/entites/book_entity.dart';
 
 abstract class HomeRemoteDataSource {
-  Future<List<BookEntites>> fetchFeatureBooks();
-  Future<List<BookEntites>> fetchNewestBooks();
+  Future<List<BookEntity>> fetchFeatureBooks();
+  Future<List<BookEntity>> fetchNewestBooks();
 }
 
 class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
@@ -12,23 +12,23 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
 
   HomeRemoteDataSourceImpl({required this.apiServisce});
   @override
-  Future<List<BookEntites>> fetchFeatureBooks() async {
+  Future<List<BookEntity>> fetchFeatureBooks() async {
     var data = await apiServisce.get(
         endPoint: 'volumes?Filtering=free-ebooks&q=programming');
-    List<BookEntites> books = getBooksList(data);
+    List<BookEntity> books = getBooksList(data);
     return books;
   }
 
   @override
-  Future<List<BookEntites>> fetchNewestBooks() async {
+  Future<List<BookEntity>> fetchNewestBooks() async {
     var data = await apiServisce.get(
         endPoint: 'volumes?Filtering=free-ebooks&Sorting=newest&q=programming');
-    List<BookEntites> books = getBooksList(data);
+    List<BookEntity> books = getBooksList(data);
     return books;
   }
 
-  List<BookEntites> getBooksList(Map<String, dynamic> data) {
-    List<BookEntites> books = [];
+  List<BookEntity> getBooksList(Map<String, dynamic> data) {
+    List<BookEntity> books = [];
     for (var bookMap in data['items']) {
       books.add(BookModel.fromJson(bookMap));
     }
