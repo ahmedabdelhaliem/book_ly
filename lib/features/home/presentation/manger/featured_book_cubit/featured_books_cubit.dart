@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:book_ly/core/errors/failure.dart';
 import 'package:book_ly/features/home/domain/entites/book_entity.dart';
 import 'package:book_ly/features/home/domain/use-cases/fetch_feature_books_use_case.dart';
 import 'package:meta/meta.dart';
