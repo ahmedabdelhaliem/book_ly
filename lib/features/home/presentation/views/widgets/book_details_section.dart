@@ -1,6 +1,6 @@
 import 'package:book_ly/core/utils/styles.dart';
-import 'package:book_ly/features/home/views/widgets/book_rating.dart';
-import 'package:book_ly/features/home/views/widgets/custom_book_item_list_view.dart';
+import 'package:book_ly/features/home/presentation/views/widgets/book_rating.dart';
+import 'package:book_ly/features/home/presentation/views/widgets/custom_book_item_list_view.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsSection extends StatelessWidget {

@@ -1,7 +1,7 @@
-import 'package:book_ly/features/home/views/widgets/action_botton_section.dart';
-import 'package:book_ly/features/home/views/widgets/book_details_section.dart';
-import 'package:book_ly/features/home/views/widgets/custtom_appbar_details.dart';
-import 'package:book_ly/features/home/views/widgets/similar_book_section.dart';
+import 'package:book_ly/features/home/presentation/views/widgets/action_botton_section.dart';
+import 'package:book_ly/features/home/presentation/views/widgets/book_details_section.dart';
+import 'package:book_ly/features/home/presentation/views/widgets/custtom_appbar_details.dart';
+import 'package:book_ly/features/home/presentation/views/widgets/similar_book_section.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
